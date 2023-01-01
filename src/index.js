@@ -1,28 +1,24 @@
 import './style.css'
 import ReactDOM from 'react-dom/client'
-import { Canvas } from '@react-three/fiber'
-import ScrollMarquee from './components/marquee/ScrollMarquee'
-import ExperienceStone from './experience-stone/ExperienceStone'
-import Sky from './experience-stone/Sky'
+// Bootstrap CSS
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// Bootstrap Bundle JS
+// import "bootstrap/dist/js/bootstrap.bundle.min";
+import App from './App'
+import React, { Suspense } from 'react'
+import Header from './components/header/Header'
+import AboutMe from './components/sections/Section'
 
 const root = ReactDOM.createRoot(document.querySelector('#root'))
 
 root.render(
     <>
-    {/* <ScrollMarquee/> */}
+ <Suspense fallback={null}>
+    <App/>
 
-    <Canvas
-        shadows
-        camera={ {
-            fov: 60,
-            near: 0.1,
-            far: 300,
-            position: [ - 5, 3, 6 ]
-        } }
-        >
-            <Sky/>
-        <ExperienceStone />
-    </Canvas>
-        
-            </>
+   
+   <Header/>
+   <AboutMe/>
+   </Suspense>
+    </>
 )
