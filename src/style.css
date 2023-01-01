@@ -1,7 +1,6 @@
 html
 body,
-#root
-{
+#root{
     position: fixed;
     top: 0;
     left: 0;
@@ -9,14 +8,14 @@ body,
     height: 100%;
 }
 .aboutme{
-  position: fixed;
-  width: 100vh;
-  position:fixed;
-  height: 100vh;
+  /* position: fixed; */
   background:black;
-   position: absolute;
-   width: 100vw;
-   height: 100vh;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  color: white;
 }
 
 .loader {
@@ -32,7 +31,18 @@ body,
 
   }
 
+  a:link {
+    padding: 0 3.25em;
+    letter-spacing: 0.4em;
+    position: relative;
+    text-decoration: none;
+    color: BLACK;
+  }
 
+  
+a:visited {
+  color: BLACK;
+}
   .header {
     position: absolute;
     top: 6em;
@@ -43,12 +53,14 @@ body,
     font-size: 0.8em;
     width: 100%;
     text-align: center;
+    text-decoration: none!important;
   }
   
   .header > span {
     padding: 0 3.25em;
     letter-spacing: 0.4em;
     position: relative;
+    text-decoration: none;
   }
   
   .header > span.active::after {
@@ -60,6 +72,7 @@ body,
     width: 20px;
     height: 2px;
     background: BLACK;
+    text-decoration: none;
   }
   
   .middle {
@@ -103,6 +116,13 @@ body,
         padding: 0 1.25em;
         letter-spacing: 0.2em;
         padding-top: 5em;
+      }
+
+      a:link {
+          padding: 0 1.25em;
+          letter-spacing: 0.2em;
+          padding-top: 5em;
+        
       }
 
    

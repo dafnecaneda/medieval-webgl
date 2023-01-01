@@ -7,7 +7,6 @@ import ReactDOM from 'react-dom/client'
 import App from './App'
 import React, { Suspense } from 'react'
 import Header from './components/header/Header'
-import AboutMe from './components/sections/Section'
 
 const root = ReactDOM.createRoot(document.querySelector('#root'))
 
@@ -18,7 +17,7 @@ root.render(
 
    
    <Header/>
-   <AboutMe/>
+ 
    </Suspense>
     </>
 )

@@ -1,7 +1,10 @@
 import { Canvas } from "@react-three/fiber";
 import ExperienceStone from "./experience-stone/ExperienceStone";
 import { Suspense } from "react";
-import { Html } from "@react-three/drei";
+import { Html, Scroll, ScrollControls } from "@react-three/drei";
+import { Switch } from "wouter";
+import { Route } from "wouter";
+import AboutMe from "./components/sections/AboutMe";
 
 export default function App() {
   return (
@@ -17,11 +20,21 @@ export default function App() {
         <Suspense
           fallback={
             <Html center className="loader">
-              LOADING
+              LOADING ...
             </Html>
           }
         >
-          <ExperienceStone />
+          <ScrollControls pages={4}>
+            <Scroll>
+              <Switch>
+                <Route path="/" />
+                <Route path="/aboutme">
+                  <AboutMe />
+                </Route>
+              </Switch>
+              <ExperienceStone />
+            </Scroll>
+          </ScrollControls>
         </Suspense>
       </Canvas>
     </>
