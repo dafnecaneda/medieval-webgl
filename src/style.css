@@ -1,4 +1,4 @@
-html,
+html
 body,
 #root
 {
@@ -7,5 +7,106 @@ body,
     left: 0;
     width: 100%;
     height: 100%;
-    background: black;
 }
+.aboutme{
+  position: fixed;
+  width: 100vh;
+  position:fixed;
+  height: 100vh;
+  background:black;
+   position: absolute;
+   width: 100vw;
+   height: 100vh;
+}
+
+.loader {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+
+  }
+
+
+  .header {
+    position: absolute;
+    top: 6em;
+    left: 0;
+    color: BLACK;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 900;
+    font-size: 0.8em;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .header > span {
+    padding: 0 3.25em;
+    letter-spacing: 0.4em;
+    position: relative;
+  }
+  
+  .header > span.active::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+    width: 20px;
+    height: 2px;
+    background: BLACK;
+  }
+  
+  .middle {
+    pointer-events: none;
+    position: absolute;
+    bottom: 2.5em;
+    left: 50%;
+    transform: translate3d(-50%, 30%, 0);
+    font-size: 2em;
+    letter-spacing: 0.5em;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .middle > h1 {
+    line-height: 0.9em;
+    font-weight: 100;
+  }
+  
+  .middle > h1::after {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    left: calc(50% - 25px);
+    width: 50px;
+    height: 2px;
+    background: BLACK;
+  }
+  
+  .middle > h2 {
+    font-size: 1em;
+    line-height: 0px;
+    font-weight: 100;
+    letter-spacing: 0.25em;
+    font-style: italic;
+    color: white;
+  }
+
+  @media (max-width: 660px) {
+    .header > span {
+        padding: 0 1.25em;
+        letter-spacing: 0.2em;
+        padding-top: 5em;
+      }
+
+   
+      .middle  {
+letter-spacing: 0;
+      }
+  }
