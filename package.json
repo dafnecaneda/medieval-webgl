@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "react-scripts start",
-    "build": "react-scripts build"
+    "dev": "node init && react-scripts start",
+    "build": "node init && react-scripts build"
   },
   "keywords": [],
   "author": "",
