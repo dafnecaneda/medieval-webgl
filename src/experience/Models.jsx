@@ -1,8 +1,6 @@
-import { Center } from "@react-three/drei";
-import { useLoader } from "@react-three/fiber";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import { Center, useGLTF} from "@react-three/drei";
 export default function StoneModel() {
-  const wappenhalter = useLoader(GLTFLoader, "./wappenhalter.glb");
+  const wappenhalter = useGLTF("./wappenhalter-transformed.glb");
   return (
     <>
       <Center>
