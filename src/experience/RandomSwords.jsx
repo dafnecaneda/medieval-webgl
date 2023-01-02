@@ -3,7 +3,7 @@ import { useFrame } from "@react-three/fiber";
 import { useRef } from "react";
 
 export default function RandomSwords() {
-  const sword = useGLTF("./sword.glb");
+  const sword = useGLTF("./sword-transformed.glb");
   const swordRef = useRef([]);
 
   useFrame((state, delta) => {
@@ -32,4 +32,4 @@ export default function RandomSwords() {
   );
 }
 
-useGLTF.preload("./sword.glb");
+useGLTF.preload("./sword-transformed.glb");
