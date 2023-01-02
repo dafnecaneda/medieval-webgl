@@ -1,3 +1,5 @@
+/* BASIC SETUP */
+
 html
 body,
 #root{
@@ -7,109 +9,97 @@ body,
     width: 100%;
     height: 100%;
 }
-.aboutme{
-  /* position: fixed; */
-  background:black;
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  color: white;
-}
+
+/* LOADER */
 
 .loader {
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: 900;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: black;
-    background-color: white;
-    width: 100vw;
-    height: 100vh;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+}
 
-  }
+/* ABOUT ME */
+.aboutme{
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+}
 
-  a:link {
-    padding: 0 3.25em;
-    letter-spacing: 0.4em;
-    position: relative;
-    text-decoration: none;
-    color: BLACK;
-  }
+
+a:link {
+  padding: 0 3.25em;
+  letter-spacing: 0.4em;
+  position: relative;
+  text-decoration: none;
+  color: BLACK;
+}
 
   
 a:visited {
   color: BLACK;
 }
-  .header {
-    position: absolute;
-    top: 6em;
-    left: 0;
-    color: BLACK;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: 900;
-    font-size: 0.8em;
-    width: 100%;
-    text-align: center;
-    text-decoration: none!important;
-  }
+
+.header {
+  top: 6em;
+  left: 0;
+  color: BLACK;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 900;
+  font-size: 0.8em;
+  width: 100%;
+  transform: translate3d(80%, 0,0);
+  text-decoration: none!important;
+}
   
-  .header > span {
-    padding: 0 3.25em;
-    letter-spacing: 0.4em;
-    position: relative;
-    text-decoration: none;
-  }
+.header > span {
+  padding: 0 3.25em;
+  letter-spacing: 0.4em;
+  position: relative;
+  text-decoration: none;
+  transform: translate3d(-80%, -30%, 0);
+}
   
-  .header > span.active::after {
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translate3d(-50%, 0, 0);
-    width: 20px;
-    height: 2px;
-    background: BLACK;
-    text-decoration: none;
-  }
+.header > span.active::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translate3d(-50%, 40%, 0);
+  width: 20px;
+  height: 2px;
+  background: white;
+  text-decoration: none;
+  transform: translate3d(-80%, 30%, 0);
+}
   
-  .middle {
-    pointer-events: none;
-    position: absolute;
-    bottom: 2.5em;
-    left: 50%;
-    transform: translate3d(-50%, 30%, 0);
-    font-size: 2em;
-    letter-spacing: 0.5em;
-    text-align: center;
-    width: 100%;
-  }
+.middle {
+  pointer-events: none;
+  transform: translate3d(-80%, -20%, 0);
+  font-size: 2em;
+  letter-spacing: 0.5em;
+  color: white;
+}
   
-  .middle > h1 {
-    line-height: 0.9em;
-    font-weight: 100;
-  }
-  
-  .middle > h1::after {
-    content: "";
-    position: absolute;
-    bottom: 10px;
-    left: calc(50% - 25px);
-    width: 50px;
-    height: 2px;
-    background: BLACK;
-  }
-  
-  .middle > h2 {
-    font-size: 1em;
-    line-height: 0px;
-    font-weight: 100;
-    letter-spacing: 0.25em;
-    font-style: italic;
-    color: white;
-  }
+.middle > h1 {
+  line-height: 0.9em;
+  font-weight: 100;
+}
+
+.middle > h2 {
+  font-size: 1em;
+  line-height: 0px;
+  font-weight: 100;
+  letter-spacing: 0.25em;
+  font-style: italic;
+  color: white;
+}
+
 
   @media (max-width: 660px) {
     .header > span {
@@ -118,15 +108,15 @@ a:visited {
         padding-top: 5em;
       }
 
-      a:link {
-          padding: 0 1.25em;
-          letter-spacing: 0.2em;
-          padding-top: 5em;
+    a:link {
+        padding: 0 1.25em;
+        letter-spacing: 0.2em;
+        padding-top: 5em;
         
       }
 
-   
-      .middle  {
-letter-spacing: 0;
+    .middle  {
+        transform: translate3d(-50%, -30%, 0);
+        letter-spacing: 0;
       }
   }

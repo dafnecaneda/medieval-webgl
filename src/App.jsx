@@ -1,10 +1,10 @@
-import { Canvas } from "@react-three/fiber";
-import ExperienceStone from "./experience-stone/ExperienceStone";
 import { Suspense } from "react";
+import { Canvas } from "@react-three/fiber";
 import { Html, Scroll, ScrollControls } from "@react-three/drei";
-import { Switch } from "wouter";
-import { Route } from "wouter";
-import AboutMe from "./components/sections/AboutMe";
+import { Switch, Route } from "wouter";
+import Experience from "./experience/Experience";
+import Texto from "./components/texto/Texto";
+import AboutMe from "./components/about-me/AboutMe";
 
 export default function App() {
   return (
@@ -12,9 +12,9 @@ export default function App() {
       <Canvas
         shadows
         camera={{
-          fov: 90,
+          fov: 45,
 
-          position: [-3, 3, 6],
+          position: [-3, 4, 6],
         }}
       >
         <Suspense
@@ -24,17 +24,18 @@ export default function App() {
             </Html>
           }
         >
-          <ScrollControls pages={4}>
-            <Scroll>
-              <Switch>
-                <Route path="/" />
-                <Route path="/aboutme">
-                  <AboutMe />
-                </Route>
-              </Switch>
-              <ExperienceStone />
-            </Scroll>
-          </ScrollControls>
+          {/* <ScrollControls pages={4}>
+            <Scroll> */}
+          <Switch>
+            <Route path="/" />
+            <Route path="/aboutme">
+              <AboutMe />
+            </Route>
+          </Switch>
+          <Experience />
+          <Texto />
+          {/* </Scroll>
+          </ScrollControls> */}
         </Suspense>
       </Canvas>
     </>
